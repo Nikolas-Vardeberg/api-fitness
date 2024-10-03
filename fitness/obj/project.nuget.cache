@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zjCKw6OXfUc=",
+  "dgSpecHash": "HUUkoegv7Aw=",
   "success": true,
   "projectFilePath": "/Users/nikolasrek/Documents/GitHub/api-fitness/fitness/fitness.csproj",
   "expectedPackageFiles": [
+    "/Users/nikolasrek/.nuget/packages/fastendpoints/5.30.0/fastendpoints.5.30.0.nupkg.sha512",
+    "/Users/nikolasrek/.nuget/packages/fastendpoints.attributes/5.30.0/fastendpoints.attributes.5.30.0.nupkg.sha512",
+    "/Users/nikolasrek/.nuget/packages/fastendpoints.messaging.core/5.30.0/fastendpoints.messaging.core.5.30.0.nupkg.sha512",
+    "/Users/nikolasrek/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
     "/Users/nikolasrek/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
     "/Users/nikolasrek/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/nikolasrek/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
