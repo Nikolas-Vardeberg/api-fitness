@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace metafos.Models.Users;
+namespace fitness.Models.Users;
 
 public class User {
     [Key]
