@@ -16,6 +16,11 @@ public class User {
 public abstract class UserService {
     public static List<User> GetUsers() {
         return new List<User>() {
+            new User() {
+                    Email = "test@test.no",
+                    Password = "1234",
+                    Username = "metafoos",
+                },
         };
     }
 }
