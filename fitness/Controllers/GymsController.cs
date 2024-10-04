@@ -27,6 +27,27 @@ public class GymsController
         return results.ToDtos();
     }
 
+    [HttpGet("{slugOrId}")]
+    [AllowAnonymous]
+    public async Task<GymDto> Get(string slugOrId)
+    {
+        if (Guid.TryParse(slugOrId, out var id))
+        {
+            var gym = await _gymService.GetGymByIdAsync(id);
+            if (gym == null)
+                throw new Exception("Restaurant not found");
+
+            return gym.ToDto();
+        }
+        
+        var gymBySlug = await _gymService.GetGymBySlugAsync(slugOrId);
+        
+        if (gymBySlug == null)
+            throw new Exception("Restaurant not found");
+        
+        return gymBySlug.ToDto();
+    }
+
     [HttpPost]
     [AllowAnonymous]
     public async Task<GymDto> Create([FromBody] CreateGymDto dto)
@@ -46,7 +67,7 @@ public class GymsController
 
         var success = await _gymService.CreateGymAsync(gym);
         if (!success)
-            throw new Exception("Failed to create restaurant");
+            throw new Exception("Failed to create gym");
 
         return gym.ToDto();
     }
