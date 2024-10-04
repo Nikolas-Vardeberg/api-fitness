@@ -12,7 +12,7 @@ Before you begin, ensure you have the following installed:
 
 ```bash
 git clone https://github.com/nikolas-vardeberg/api-fitness.git
-cd dotnet-api-with-docker
+cd fitness
 ```
 
 
@@ -34,5 +34,62 @@ Creates a new user in the database.
   "Password": "mysecretpassword",
   "Email": "johndoe@example.com"
 }
+```
+
+**Response with status 200**
+
+```json
+{
+  "id": "c8a6as.8162131.cada612",
+  "Username": "John Doe",
+  "Password": "mysecretpassword",
+  "Email": "johndoe@example.com"
+}
+```
+
+**Response with status 400**
+
+When a user attempts to create an account but fails to meet validation criteria, the API will return a 400 Bad Request response. The structure of the response will include specific error messages for each field that failed validation.
+
+```json
+{
+    "statusCode": 400,
+    "message": "One or more errors occurred!",
+    "errors": {
+        "username": [
+            "Your username is too short."
+        ],
+        "email": [
+            "'email' er ikke en gyldig e-postadresse."
+        ],
+        "password": [
+            "Your password is too short."
+        ]
+    }
+}
+```
+
+
+### Getting users in the database
+
+**Endpoint:** `GET /api/user/`
+
+**Response**
+
+```json
+{
+    "users": [
+        {
+            "id": "02453677-857a-4574-b1d3-6ffba8f36405",
+            "email": "nikolas@gmail.com",
+            "password": "1234",
+            "username": "Nikolas"
+        }
+    ]
+}
+```
+
+
+
 
 
