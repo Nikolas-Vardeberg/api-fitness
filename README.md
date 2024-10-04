@@ -70,7 +70,7 @@ When a user attempts to create an account but fails to meet validation criteria,
 ```
 
 
-### Getting users in the database
+### Fetching users in the database
 
 **Endpoint:** `GET /api/user/`
 
@@ -89,6 +89,77 @@ When a user attempts to create an account but fails to meet validation criteria,
 }
 ```
 
+### Create a Gym Location
+
+**Endpoint:** `POST /api/gyms`
+
+Creates a new gym location in the database.
+
+**Request body:**
+
+```json
+{
+  "Name": "Navn",
+    "Slug": "slug-navn",
+    "Description": "Kort beskrivelse",
+    "Address": "Brugata 123",
+    "State": "Innlandet",
+    "City": "Hamar",
+    "ZipCode": "2360",
+    "PhoneNumber": "123 45 678",
+    "Website": "site.no"
+}
+```
+
+**Response with status 200**
+
+```json
+{
+    "id": "7e65679e-49df-4658-a956-eab5d52574d0",
+    "name": "Navn",
+    "slug": "slug-navn",
+    "description": "Kort beskrivelse",
+    "address": "Brugata 123",
+    "state": "Innlandet",
+    "city": "Hamar",
+    "zipCode": "2360",
+    "phoneNumber": "123 45 678",
+    "website": "site.no"
+}
+```
+
+### Fetching Gym Locations in the database
+
+**Endpoint:** `GET /api/gyms/`
+
+**Response**
+
+```json
+{
+    "gyms": [
+        {
+           "id": "7e65679e-49df-4658-a956-eab5d52574d0",
+            "name": "Navn",
+            "slug": "slug-navn",
+            "description": "Kort beskrivelse",
+            "address": "Brugata 123",
+            "state": "Innlandet",
+            "city": "Hamar",
+            "zipCode": "2360",
+            "phoneNumber": "123 45 678",
+            "website": "site.no"
+        }
+    ]
+}
+```
+
+### Fetching Gym Location by ID
+
+Jobber fortsatt med dette :)
+
+### Deleting Gym Location by ID
+
+jobber fortsatt med dette :)
 
 
 
