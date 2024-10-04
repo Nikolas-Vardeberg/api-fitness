@@ -1,6 +1,7 @@
 using fitness.Models.Users;
 using fitness.Models.Trainers;
 using Microsoft.EntityFrameworkCore;
+using fitness.Models;
 
 namespace fitness.Data;
 
@@ -10,5 +11,5 @@ namespace fitness.Data;
         public DataContext(DbContextOptions<DataContext> options) : base(options) {}
 
         public DbSet<User> Users {get;set;}
-        public DbSet<Trainer> Trainers {get; set;}
+        public DbSet<Gym> Gyms {get; set;}
     }
