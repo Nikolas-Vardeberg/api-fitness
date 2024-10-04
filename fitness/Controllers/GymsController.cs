@@ -19,6 +19,14 @@ public class GymsController
         _gymService = gymService;
     }
 
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<List<GymDto>> Get()
+    {
+        var results = await _gymService.GetGymsAsync();
+        return results.ToDtos();
+    }
+
     [HttpPost]
     [AllowAnonymous]
     public async Task<GymDto> Create([FromBody] CreateGymDto dto)
