@@ -1,5 +1,4 @@
 using fitness.Models.Users;
-using fitness.Models.Trainers;
 using Microsoft.EntityFrameworkCore;
 using fitness.Models;
 
