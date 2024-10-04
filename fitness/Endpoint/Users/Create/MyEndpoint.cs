@@ -19,6 +19,7 @@ public class MyEndpoint : Endpoint<MyRequest, User>
             Username = req.Username,
             Password = req.Password,
         };
+
         var success = await UserService.CreateUser(user);
         await SendAsync(user);
 

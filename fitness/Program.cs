@@ -2,6 +2,7 @@ using FastEndpoints;
 using fitness.Data;
 using fitness.Services.Users;
 using Microsoft.EntityFrameworkCore;
+using FluentValidation;
 
 var bld = WebApplication.CreateBuilder();
 bld.Services.AddFastEndpoints();
