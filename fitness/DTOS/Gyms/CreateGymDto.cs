@@ -22,4 +22,6 @@ public class CreateGymDto
     public string PhoneNumber { get; set; } = String.Empty;
     
     public string Website { get; set; } = String.Empty;
+
+    public OpeningHours OpeningHours { get; set; } = null!;
 }

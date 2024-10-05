@@ -22,5 +22,7 @@ public class GymDto
     public string PhoneNumber { get; set; } = string.Empty;
     
     public string Website { get; set; } = string.Empty;
+
+    public OpeningHoursDto OpeningHours { get; set; } = null!;
     
 }

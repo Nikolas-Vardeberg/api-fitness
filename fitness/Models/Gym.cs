@@ -29,5 +29,5 @@ public class Gym
     
     public string Website { get; set; } = string.Empty;
 
-    //TODO: LEGGE TIL OPENINGSHOURS
+    public OpeningHours OpeningHours { get; set; } = null!;
 }

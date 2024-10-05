@@ -63,6 +63,8 @@ public class GymsController
             ZipCode = dto.ZipCode,
             PhoneNumber = dto.PhoneNumber,
             Website = dto.Website,
+            OpeningHours = dto.OpeningHours,
+            
         };
 
         var success = await _gymService.CreateGymAsync(gym);
