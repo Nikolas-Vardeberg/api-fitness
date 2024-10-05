@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using FluentValidation;
 using fitness.Interfaces;
 using fitness.Services;
+using fitness.Models.Identity;
 
 var bld = WebApplication.CreateBuilder();
 bld.Services.AddFastEndpoints();
