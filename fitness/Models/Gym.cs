@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using fitness.DTOS.Gyms;
 
 namespace fitness.Models;
 
@@ -30,6 +29,4 @@ public class Gym
     public string Website { get; set; } = string.Empty;
 
     public OpeningHours OpeningHours { get; set; } = null!;
-
-    public Trainer Trainer { get; set; } = null!;
 }
